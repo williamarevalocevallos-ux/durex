@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Durexporta | Premium Exotic Fruit Exporter from Ecuador</title>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,300..1000&family=Material+Symbols+Rounded:opsz,wght,FILL@24,500,1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#C2D500;--lime-2:#E9F38C;--red:#E30A3C;--red-2:#FFD9DF;--yellow:#FFD400;--ink:#1D2416;--gray:#555B4E;--paper:#FBFAF5;--card:#F2F1EA;
+  --spring:cubic-bezier(.34,1.56,.64,1);--ease:cubic-bezier(.2,0,0,1)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Google Sans Flex",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.ms{font-family:"Material Symbols Rounded";font-size:22px;line-height:1;font-style:normal;display:inline-block;width:1em;overflow:hidden}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+button{font:inherit;border:0;background:none;cursor:pointer;color:inherit}
+
+/* ===== top bar ===== */
+.top{margin:8px 12px 0;background:var(--lime);border-radius:0 0 24px 24px;padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:14px;gap:12px}
+.top .soc{display:flex;gap:6px}
+.top .soc a{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#ffffff55;font-weight:800;font-size:13px;transition:border-radius .4s var(--spring),background .3s}
+.top .soc a:hover{border-radius:10px;background:#fff}
+@media(max-width:640px){.top span{display:none}.top{justify-content:flex-end}}
+
+/* ===== nav ===== */
+nav{position:sticky;top:0;z-index:40;transition:background .3s,box-shadow .3s}
+nav.stuck{background:#FBFAF5E6;backdrop-filter:blur(14px);box-shadow:0 1px 0 #0001}
+.nav{display:flex;align-items:center;gap:8px;height:84px}
+.logo img{height:52px;display:block}
+.links{display:flex;gap:2px;margin-left:auto}
+.links a{padding:10px 16px;border-radius:100px;font-weight:600;font-size:15px;transition:background .25s}
+.links a:hover{background:var(--lime-2)}
+.lang{display:flex;background:var(--card);border-radius:100px;padding:4px;margin-left:8px;position:relative}
+.lang button{position:relative;z-index:1;padding:8px 14px;font-weight:700;font-size:13px;border-radius:100px;transition:color .3s}
+.lang i{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);background:var(--ink);border-radius:100px;transition:translate .5s var(--spring)}
+.lang[data-l="es"] i{translate:100% 0}
+.lang button.on{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 24px;border-radius:100px;font-weight:700;background:var(--red);color:#fff;transition:border-radius .45s var(--spring),scale .45s var(--spring)}
+.btn:hover{border-radius:14px;scale:1.04}
+.btn:active{scale:.95}
+.menu{display:none;width:48px;height:48px;border-radius:50%;background:var(--card);place-items:center}
+@media(max-width:980px){.links{display:none}.nav .btn{display:none}.menu{display:grid}.lang{margin-left:auto}
+  .links.open{display:flex;position:absolute;top:84px;left:12px;right:12px;flex-direction:column;background:#fff;border-radius:28px;padding:12px;box-shadow:0 20px 40px #0002}}
+
+/* ===== hero ===== */
+.hero{position:relative;margin:0 12px;border-radius:40px;overflow:hidden;min-height:calc(100svh - 150px);display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:20px;padding:56px 5vw;background:#111}
+.hero .bg{position:absolute;inset:0;background:url(img/banner.webp) center/cover;filter:brightness(.42) saturate(1.1);animation:pan 26s ease-in-out infinite alternate;scale:1.08}
+@keyframes pan{to{translate:-3% 0;scale:1.16}}
+.hero>*:not(.bg){position:relative;z-index:1}
+.hero .eyebrow{display:inline-flex;gap:8px;align-items:center;background:var(--lime);color:var(--ink);padding:8px 16px;border-radius:12px;font-weight:700;font-size:14px}
+.hero h1{color:#fff;font-size:clamp(46px,7.4vw,118px);line-height:.88;font-weight:950;letter-spacing:-.045em;margin:22px 0}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln span{display:inline-block;translate:0 105%;transition:translate 1.1s var(--ease)}
+.hero.go h1 .ln span{translate:0 0}
+.hero h1 .ln:nth-child(2) span{transition-delay:.08s}.hero h1 .ln:nth-child(3) span{transition-delay:.16s;color:var(--lime)}.hero h1 .ln:nth-child(4) span{transition-delay:.24s;color:var(--lime)}
+.hero p{color:#ffffffd9;font-size:clamp(17px,1.5vw,21px);max-width:480px;margin-bottom:30px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.ghost{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 20px 0 6px;border-radius:100px;color:#fff;font-weight:700;background:#ffffff1f;backdrop-filter:blur(8px)}
+.ghost .c{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--red);display:grid;place-items:center;transition:border-radius .4s var(--spring)}
+.ghost:hover .c{border-radius:10px}
+
+/* shard stage */
+.stage{position:relative;aspect-ratio:1;width:100%;max-width:520px;justify-self:center}
+.shards{position:absolute;inset:0;cursor:pointer}
+.shards .t{position:absolute;background-repeat:no-repeat;will-change:transform,opacity;
+  transition:transform 1.4s var(--spring),opacity .9s var(--ease),border-radius .6s;border-radius:30%}
+.shards.built .t{transform:none!important;opacity:1!important;border-radius:0}
+.hero-shape{position:absolute;inset:0;clip-path:polygon(50% 0%,63% 9%,79% 5%,84% 20%,97% 28%,92% 43%,100% 57%,88% 67%,88% 83%,72% 86%,62% 99%,50% 91%,38% 99%,28% 86%,12% 83%,12% 67%,0% 57%,8% 43%,3% 28%,16% 20%,21% 5%,37% 9%);transition:clip-path 1.2s var(--spring)}
+
+@keyframes spin{to{rotate:360deg}}
+.hint{position:absolute;top:-6px;right:0;background:#fff;color:var(--ink);font-size:13px;font-weight:700;padding:8px 14px;border-radius:100px;display:flex;gap:6px;align-items:center;box-shadow:0 10px 30px #0004;rotate:6deg}
+
+/* video circle */
+.vid{position:absolute;left:-14%;bottom:-6%;width:44%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 20px 50px #0006;transition:border-radius .6s var(--spring),scale .6s var(--spring)}
+.vid img{width:100%;height:100%;object-fit:cover}
+.vid .p{position:absolute;inset:0;display:grid;place-items:center;background:#0003}
+.vid .p span{width:64px;height:64px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;animation:pulse 2s infinite}
+.vid .p .ms{font-size:34px}
+.vid:hover{border-radius:36px;scale:1.06}
+@keyframes pulse{0%{box-shadow:0 0 0 0 #E30A3Caa}100%{box-shadow:0 0 0 26px #E30A3C00}}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding:40px 24px 80px}.stage{max-width:380px}.vid{left:-4%}}
+
+/* ===== marquee ===== */
+.marq{overflow:hidden;padding:36px 0 10px}
+.marq div{display:flex;width:max-content;animation:mq 28s linear infinite}
+.marq span{font-size:clamp(40px,7vw,104px);font-weight:950;letter-spacing:-.05em;white-space:nowrap;padding-right:40px;display:flex;align-items:center;gap:40px}
+.marq b{color:transparent;-webkit-text-stroke:2px var(--ink)}
+.marq i{font-style:normal}
+.marq img{height:.8em;width:.8em;object-fit:cover;border-radius:40% 60% 55% 45%}
+@keyframes mq{to{translate:-50% 0}}
+
+/* ===== products ===== */
+.sec-h{text-align:center;padding:80px 0 40px}
+.sec-h small{color:var(--red);font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+.sec-h h2{font-size:clamp(38px,5.4vw,76px);font-weight:950;letter-spacing:-.045em;line-height:.95;margin-top:10px}
+.prods{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.pc{background:var(--card);border-radius:32px;padding:10px 10px 26px;position:relative;transition:border-radius .6s var(--spring),translate .6s var(--spring),background .4s}
+.pc:hover{border-radius:64px 32px 64px 32px;translate:0 -10px;background:#fff;box-shadow:0 30px 60px #0001}
+.pc .img{position:relative;aspect-ratio:1;border-radius:24px;overflow:hidden;transition:border-radius .6s var(--spring)}
+.pc:hover .img{border-radius:50% 50% 24px 24px}
+.pc .ic{position:absolute;left:16px;top:-26px;width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 6px 16px #0002;z-index:2;font-size:26px;transition:rotate .6s var(--spring),background .3s}
+.pc:hover .ic{rotate:-20deg;background:var(--lime)}
+.pc .body{position:relative;padding:36px 16px 0}
+.pc h3{color:var(--red);font-size:28px;font-weight:850;letter-spacing:-.03em;margin-bottom:10px}
+.pc p{color:var(--gray);font-size:15px;line-height:1.55}
+.pc .go{display:inline-flex;gap:4px;align-items:center;margin-top:16px;font-weight:700;font-size:14px;color:var(--ink);opacity:0;translate:-8px 0;transition:.4s var(--spring)}
+.pc:hover .go{opacity:1;translate:0 0}
+@media(max-width:1100px){.prods{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.prods{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.prods{grid-template-columns:1fr}}
+
+/* ===== banner reveal ===== */
+.reveal{height:170vh;position:relative;margin-top:100px}
+.reveal .pin{position:sticky;top:0;height:100svh;display:grid;place-items:center;overflow:hidden}
+.reveal .im{position:absolute;inset:0;background:url(img/banner.webp) center/cover;clip-path:inset(var(--i,38%) var(--j,30%) round var(--r,200px))}
+.reveal h3{position:relative;color:#fff;font-size:clamp(44px,9vw,150px);font-weight:950;letter-spacing:-.05em;text-align:center;line-height:.9;text-shadow:0 10px 60px #000b;opacity:var(--o,0);scale:calc(.85 + var(--o,0)*.15)}
+
+/* ===== news ===== */
+.news{padding-bottom:100px}
+.ncards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.nc{border-radius:32px;overflow:hidden;background:var(--card);transition:border-radius .5s var(--spring)}
+.nc:hover{border-radius:72px 32px}
+.nc .im{aspect-ratio:16/10;background-size:cover;background-position:center}
+.nc div{padding:22px}
+.nc small{color:var(--red);font-weight:700}
+.nc h4{font-size:21px;margin-top:6px;letter-spacing:-.02em}
+@media(max-width:800px){.ncards{grid-template-columns:1fr}}
+
+/* ===== footer ===== */
+footer{margin:0 12px 12px;background:var(--ink);color:#E9ECE0;border-radius:48px;padding:64px 5vw 28px;position:relative;overflow:hidden}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:32px}
+footer h5{font-size:17px;margin-bottom:18px;position:relative;padding-bottom:12px}
+footer h5::after{content:"";position:absolute;left:0;bottom:0;width:32px;height:3px;border-radius:3px;background:var(--lime)}
+footer ul{list-style:none;display:grid;gap:10px;font-size:15px;opacity:.85}
+footer ul a:hover{color:var(--lime)}
+footer .fl img{height:46px;filter:brightness(0) invert(1)}
+footer .fl p{opacity:.8;margin:16px 0 20px;max-width:300px}
+.mail{display:flex;background:#ffffff14;border-radius:100px;padding:6px;max-width:320px}
+.mail input{flex:1;background:none;border:0;color:#fff;padding:0 16px;font:inherit;outline:0;min-width:0}
+.mail button{width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;transition:border-radius .4s var(--spring)}
+.mail button:hover{border-radius:12px}
+.fgal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.fgal img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;transition:border-radius .5s var(--spring)}
+.fgal img:hover{border-radius:50%}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid #ffffff22;margin-top:48px;padding-top:22px;font-size:14px;opacity:.75}
+.fbot div{display:flex;gap:20px}
+.big{font-size:clamp(70px,17vw,260px);font-weight:1000;letter-spacing:-.06em;line-height:.8;color:#ffffff0d;margin-top:30px;white-space:nowrap;user-select:none}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+.totop{position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:18px;background:var(--red);color:#fff;display:grid;place-items:center;z-index:30;box-shadow:0 10px 24px #E30A3C55;opacity:0;scale:.6;transition:.5s var(--spring)}
+.totop.show{opacity:1;scale:1}
+.totop:hover{border-radius:50%}
+
+/* ===== video modal ===== */
+.modal{position:fixed;inset:0;z-index:80;background:#000d;display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .4s}
+.modal.open{opacity:1;pointer-events:auto}
+.modal .box{width:min(1100px,100%);aspect-ratio:16/9;border-radius:32px;overflow:hidden;background:#000;scale:.7;transition:scale .6s var(--spring);position:relative}
+.modal.open .box{scale:1}
+.modal iframe{width:100%;height:100%;border:0}
+.modal .x{position:absolute;top:20px;right:20px;width:56px;height:56px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center}
+.modal .alt{position:absolute;bottom:22px;left:50%;translate:-50% 0;color:#fff;font-size:14px;opacity:.8;text-align:center}
+.modal .alt a{text-decoration:underline}
+
+.up{opacity:0;translate:0 50px;transition:opacity .9s var(--ease),translate .9s var(--ease)}
+.up.in{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.up{opacity:1;translate:0}.hero h1 .ln span{translate:0}}
+
+/* ===== scroll story: fruits rebuild while scrolling ===== */
+.story{height:600vh;position:relative}
+.story .pin{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 6vw;gap:4vw;transition:background-color .9s var(--ease),color .9s}
+.story .txt{position:relative;height:60svh}
+.story .tx{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;translate:0 40px;transition:opacity .6s,translate .8s var(--spring);pointer-events:none}
+.story .tx.on{opacity:1;translate:0 0}
+.story .tx small{font-weight:800;letter-spacing:.2em;opacity:.65}
+.story .tx h2{font-size:clamp(60px,10vw,170px);font-weight:950;letter-spacing:-.06em;line-height:.85;margin:10px 0 18px}
+.story .tx p{font-size:clamp(17px,1.5vw,21px);max-width:460px;line-height:1.5;opacity:.9}
+.story .stg{position:relative;height:80svh;width:100%}.story .stg canvas{position:absolute;inset:0}
+.story .blobbg{position:absolute;inset:8%;border-radius:42% 58% 63% 37%/41% 44% 56% 59%;background:#ffffff33;animation:morph 9s ease-in-out infinite}
+@keyframes morph{50%{border-radius:61% 39% 35% 65%/58% 63% 37% 42%;rotate:20deg}}
+.story .fr{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.story .fr .box{position:relative}
+.story .fr .t{position:absolute;background-repeat:no-repeat;will-change:transform,opacity}
+.story .fr.photo .box{border-radius:48px;overflow:hidden}
+.story .bar{position:absolute;left:6vw;right:6vw;bottom:28px;height:6px;border-radius:6px;background:#0002}
+.story .bar i{display:block;height:100%;border-radius:6px;background:currentColor;width:0}
+.story .ring{position:absolute;right:6vw;top:100px;font-weight:800;font-size:14px;padding:8px 16px;border-radius:100px;border:2px solid currentColor}
+@media(max-width:860px){.story .pin{grid-template-columns:1fr;grid-template-rows:45svh 1fr;padding-top:90px}.story .stg{height:42svh;order:-1}.story .txt{height:40svh}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <span data-i="top">Discover who we are, what we do, and where we're headed.</span>
+  <div class="soc">
+    <a href="https://facebook.com/durexporta" target="_blank" aria-label="Facebook">f</a>
+    <a href="https://instagram.com/durexporta" target="_blank" aria-label="Instagram">ig</a>
+    <a href="https://youtube.com/@DurexportaEc" target="_blank" aria-label="YouTube">▶</a>
+  </div>
+</div>
+
+<nav id="nav"><div class="wrap nav">
+  <a class="logo" href="#"><img src="https://durexporta.com/wp-content/uploads/2023/03/logo1.png" alt="Durexporta"></a>
+  <div class="links" id="links">
+    <a href="#" data-i="n1">Home</a>
+    <a href="https://durexporta.com/about-us/" data-i="n2">Our Company</a>
+    <a href="#products" data-i="n3">Our Products</a>
+    <a href="https://durexporta.com/fresh-fruit/" data-i="n4">Services</a>
+    <a href="https://trabajo.durexporta.com" data-i="n5">Careers</a>
+  </div>
+  <div class="lang" id="lang" data-l="en"><i></i><button data-set="en" class="on">EN</button><button data-set="es">ES</button></div>
+  <a class="btn" href="https://durexporta.com/contact-us/" data-i="cta">Contact Us</a>
+  <button class="menu" id="menu" aria-label="Menu"><span class="ms">menu</span></button>
+</div></nav>
+
+<header class="hero" id="hero">
+  <div class="bg"></div>
+  <div>
+    <span class="eyebrow"><span class="ms">public</span><span data-i="eb">From Ecuador to the world</span></span>
+    <h1>
+      <span class="ln"><span data-i="h1">More</span></span>
+      <span class="ln"><span data-i="h2">than fruit.</span></span>
+      <span class="ln"><span data-i="h3">We export</span></span>
+      <span class="ln"><span data-i="h4">experiences</span></span>
+    </h1>
+    <p data-i="sub">Bringing the best of our fields to the most demanding markets.</p>
+    <div class="acts">
+      <a class="btn" href="#products"><span data-i="exp">Explore More</span><span class="ms">arrow_downward</span></a>
+      <a class="ghost" href="https://www.youtube.com/watch?v=57IqMCNzdYE" target="_blank" rel="noopener"><span class="c"><span class="ms">play_arrow</span></span><span data-i="watch">Watch video</span></a>
+    </div>
+  </div>
+  <div class="stage" id="stage">
+    <button class="vid" data-video aria-label="Play video"><img src="https://i.ytimg.com/vi/57IqMCNzdYE/hqdefault.jpg" onerror="this.src='img/banner.webp'" alt=""><span class="p"><span><span class="ms">play_arrow</span></span></span></button>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div>
+  <span><i data-i="m1">Mango</i> <img src="img/mango.webp" alt=""> <b>Pitahaya</b> <img src="img/pitahaya.webp" alt=""> <i data-i="m3">Banana</i> <img src="img/banano.webp" alt=""> <b data-i="m4">Plantain</b> <img src="img/platano.webp" alt=""> <i data-i="m5">Avocado</i> <img src="img/aguacate.webp" alt=""></span>
+  <span><i data-i="m1">Mango</i> <img src="img/mango.webp" alt=""> <b>Pitahaya</b> <img src="img/pitahaya.webp" alt=""> <i data-i="m3">Banana</i> <img src="img/banano.webp" alt=""> <b data-i="m4">Plantain</b> <img src="img/platano.webp" alt=""> <i data-i="m5">Avocado</i> <img src="img/aguacate.webp" alt=""></span>
+</div></div>
+
+<section class="story" id="story"><div class="pin" id="spin">
+  <div class="txt">
+    <div class="tx" data-k="0"><small>01 / 05</small><h2 data-i="p1t">Mangoes</h2><p data-i="p1">Ecuador's largest mango producers, offering premium and organic varieties from September to January.</p></div>
+    <div class="tx" data-k="1"><small>02 / 05</small><h2>Pitahaya</h2><p data-i="p2">Premium Red and Yellow Pitahaya, available year-round with top quality and sustainability standards.</p></div>
+    <div class="tx" data-k="2"><small>03 / 05</small><h2 data-i="p3t">Banana</h2><p data-i="p3">We produce and market premium Cavendish bananas year-round, known for their uniform ripening and top-quality appearance.</p></div>
+    <div class="tx" data-k="3"><small>04 / 05</small><h2 data-i="p4t">Plantain</h2><p data-i="p4">We market Barraganete and MP-1 plantains year-round, grown by trusted partners under our quality supervision systems.</p></div>
+    <div class="tx" data-k="4"><small>05 / 05</small><h2 data-i="p5t">Avocado</h2><p data-i="p5">We proudly offer Hass and Fuerte avocados from trusted producers who follow strict quality and safety standards.</p></div>
+  </div>
+  <div class="stg" id="stg"><div class="blobbg"></div></div>
+  <div class="ring"><span data-i="scr">Scroll</span> ↓</div>
+  <div class="bar"><i id="sbar"></i></div>
+</div></section>
+
+<section class="wrap" id="products">
+  <div class="sec-h up"><small data-i="ps">Our Products</small><h2 data-i="pt">Born in our fields,<br>rebuilt for your market.</h2></div>
+  <div class="prods">
+    <article class="pc up"><div class="img"><img src="img/mango.webp" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="body"><span class="ic">🥭</span><h3 data-i="p1t">Mangoes</h3><p data-i="p1">Ecuador's largest mango producers, offering premium and organic varieties from September to January.</p><a class="go" href="https://durexporta.com/mango/"><span data-i="more">Learn more</span><span class="ms">arrow_forward</span></a></div></article>
+    <article class="pc up" style="transition-delay:.08s"><div class="img"><img src="img/pitahaya.webp" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="body"><span class="ic">🐉</span><h3>Pitahaya</h3><p data-i="p2">Premium Red and Yellow Pitahaya, available year-round with top quality and sustainability standards.</p><a class="go" href="https://durexporta.com/pitahaya/"><span data-i="more">Learn more</span><span class="ms">arrow_forward</span></a></div></article>
+    <article class="pc up" style="transition-delay:.16s"><div class="img"><img src="img/platano.webp" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="body"><span class="ic">🍌</span><h3 data-i="p3t">Banana</h3><p data-i="p3">We produce and market premium Cavendish bananas year-round, known for their uniform ripening and top-quality appearance.</p><a class="go" href="#"><span data-i="more">Learn more</span><span class="ms">arrow_forward</span></a></div></article>
+    <article class="pc up" style="transition-delay:.24s"><div class="img"><img src="img/banano.webp" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="body"><span class="ic">🌴</span><h3 data-i="p4t">Plantain</h3><p data-i="p4">We market Barraganete and MP-1 plantains year-round, grown by trusted partners under our quality supervision systems.</p><a class="go" href="#"><span data-i="more">Learn more</span><span class="ms">arrow_forward</span></a></div></article>
+    <article class="pc up" style="transition-delay:.32s"><div class="img"><img src="img/aguacate.webp" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="body"><span class="ic">🥑</span><h3 data-i="p5t">Avocado</h3><p data-i="p5">We proudly offer Hass and Fuerte avocados from trusted producers who follow strict quality and safety standards.</p><a class="go" href="#"><span data-i="more">Learn more</span><span class="ms">arrow_forward</span></a></div></article>
+  </div>
+</section>
+
+<section class="reveal" id="reveal"><div class="pin"><div class="im"></div><h3 data-i="rev">More than fruit.<br>We export experiences.</h3></div></section>
+
+<section class="wrap news">
+  <div class="sec-h up"><small data-i="ns">News &amp; Blog</small><h2 data-i="nt">Read Latest News &amp; Blog</h2></div>
+  <div class="ncards">
+    <a class="nc up" href="#"><div class="im" style="background-image:url(img/pitahaya.webp)"></div><div><small data-i="nk">Coming soon</small><h4 data-i="n1t">Pitahaya season updates</h4></div></a>
+    <a class="nc up" href="#" style="transition-delay:.1s"><div class="im" style="background-image:url(img/banano.webp)"></div><div><small data-i="nk">Coming soon</small><h4 data-i="n2t">Inside our banana packing process</h4></div></a>
+    <a class="nc up" href="#" style="transition-delay:.2s"><div class="im" style="background-image:url(img/aguacate.webp)"></div><div><small data-i="nk">Coming soon</small><h4 data-i="n3t">Meet the hands behind our fruit</h4></div></a>
+  </div>
+</section>
+
+<footer>
+  <div class="fgrid">
+    <div class="fl"><img src="https://durexporta.com/wp-content/uploads/2023/03/logo1.png" alt="Durexporta"><p data-i="tag">Our fruits are born from commitment, quality, and sustainability.</p>
+      <form class="mail" onsubmit="event.preventDefault();this.reset()"><input type="email" placeholder="Email Address" data-ph="email" required><button aria-label="Subscribe"><span class="ms">north_east</span></button></form></div>
+    <div><h5 data-i="fp">Products</h5><ul><li><a href="#products" data-i="p1t">Mangoes</a></li><li><a href="#products">Pitahaya</a></li><li><a href="#products" data-i="p3t">Banana</a></li><li><a href="#products" data-i="p4t">Plantain</a></li><li><a href="#products" data-i="p5t">Avocado</a></li></ul></div>
+    <div><h5 data-i="ff">Featured</h5><ul><li><a href="https://durexporta.com/about-us/" data-i="f1">About us</a></li><li><a href="https://durexporta.com/fresh-fruit/" data-i="f2">Fresh Fruit Processing Services</a></li><li><a href="https://durexporta.com/contact-us/" data-i="cta">Contact Us</a></li><li><a href="https://trabajo.durexporta.com" data-i="n5">Careers</a></li></ul></div>
+    <div><h5 data-i="fg">Gallery</h5><div class="fgal"><img src="img/mango.webp" alt=""><img src="img/pitahaya.webp" alt=""><img src="img/aguacate.webp" alt=""><img src="img/banano.webp" alt=""><img src="img/platano.webp" alt=""><img src="img/banner.webp" alt=""></div></div>
+  </div>
+  <div class="big">durexporta</div>
+  <div class="fbot"><span>Copyright © DUREXPORTA 2026.</span><div><a href="#" data-i="terms">Terms and Conditions</a><a href="#" data-i="priv">Privacy Policy</a></div></div>
+</footer>
+
+<a class="totop" id="totop" href="#" aria-label="Top"><span class="ms">arrow_upward</span></a>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <button class="x" id="mx" aria-label="Close"><span class="ms">close</span></button>
+  <div class="box" id="mbox"></div>
+  <div class="alt"><span data-i="alt">Video not loading?</span> <a href="https://www.youtube.com/watch?v=57IqMCNzdYE" target="_blank" data-i="yt">Watch on YouTube</a></div>
+</div>
+
+<script src="three.min.js"></script>
+<script src="fruitmorph.js"></script>
+<script>
+/* ---------- i18n ---------- */
+const T={es:{top:"Descubre quiénes somos, qué hacemos y hacia dónde vamos.",n1:"Inicio",n2:"Nuestra Empresa",n3:"Nuestros Productos",n4:"Servicios",n5:"Trabaja con nosotros",cta:"Contáctanos",
+eb:"Del Ecuador al mundo",h1:"Más",h2:"que fruta.",h3:"Exportamos",h4:"experiencias",sub:"Llevamos lo mejor de nuestros campos a los mercados más exigentes.",exp:"Explorar más",watch:"Ver video",hint:"Toca para cambiar de fruta",
+ps:"Nuestros Productos",pt:"Nacen en nuestros campos,<br>se reconstruyen para tu mercado.",p1t:"Mangos",p3t:"Banano",p4t:"Plátano",p5t:"Aguacate",
+p1:"Los mayores productores de mango del Ecuador, con variedades premium y orgánicas de septiembre a enero.",
+p2:"Pitahaya Roja y Amarilla premium, disponible todo el año con altos estándares de calidad y sostenibilidad.",
+p3:"Producimos y comercializamos banano Cavendish premium todo el año, reconocido por su maduración uniforme y su excelente apariencia.",
+p4:"Comercializamos plátano Barraganete y MP-1 todo el año, cultivado por socios de confianza bajo nuestros sistemas de supervisión de calidad.",
+p5:"Ofrecemos con orgullo aguacates Hass y Fuerte de productores de confianza que siguen estrictos estándares de calidad e inocuidad.",
+more:"Ver más",m1:"Mango",m3:"Banano",m4:"Plátano",m5:"Aguacate",rev:"Más que fruta.<br>Exportamos experiencias.",ns:"Noticias y Blog",nt:"Lee las últimas noticias y blog",nk:"Próximamente",
+n1t:"Novedades de la temporada de pitahaya",n2t:"Así empacamos nuestro banano",n3t:"Las manos detrás de nuestra fruta",
+tag:"Nuestras frutas nacen del compromiso, la calidad y la sostenibilidad.",fp:"Productos",ff:"Destacados",fg:"Galería",f1:"Sobre nosotros",f2:"Servicios de procesamiento de fruta fresca",
+terms:"Términos y Condiciones",priv:"Política de Privacidad",scr:"Desliza",alt:"¿No carga el video?",yt:"Míralo en YouTube",email:"Correo electrónico"}};
+const EN={};document.querySelectorAll('[data-i]').forEach(e=>EN[e.dataset.i]??=e.innerHTML);EN.email="Email Address";
+const lang=document.getElementById('lang');
+function setLang(l){
+  const d=l==='es'?T.es:EN;
+  document.querySelectorAll('[data-i]').forEach(e=>{const v=d[e.dataset.i];if(v!=null)e.innerHTML=v});
+  document.querySelectorAll('[data-ph]').forEach(e=>e.placeholder=d[e.dataset.ph]);
+  document.documentElement.lang=l;lang.dataset.l=l;
+  lang.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.set===l));
+  try{localStorage.setItem('dx-lang-v2',l)}catch(e){}
+}
+lang.querySelectorAll('button').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
+let saved=null;try{saved=localStorage.getItem('dx-lang-v2')}catch(e){}
+setLang(saved||'en');
+
+/* ---------- menu / nav ---------- */
+menu.onclick=()=>links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+
+/* ---------- shards: image rebuilds from flying pieces ---------- */
+function scatter(el){
+  el.classList.remove('built');
+  el.querySelectorAll('.t').forEach(t=>{
+    const a=Math.random()*Math.PI*2,d=200+Math.random()*500;
+    t.style.transform=`translate(${Math.cos(a)*d}px,${Math.sin(a)*d}px) rotate(${(Math.random()-.5)*540}deg) scale(${.2+Math.random()*.6})`;
+    t.style.opacity=0;
+  });
+}
+function build(el){
+  const n=+el.dataset.n||6,src=el.dataset.src,frag=document.createDocumentFragment();
+  for(let y=0;y<n;y++)for(let x=0;x<n;x++){
+    const t=document.createElement('i');t.className='t';
+    Object.assign(t.style,{left:x/n*100+'%',top:y/n*100+'%',width:100/n+.4+'%',height:100/n+.4+'%',
+      backgroundImage:`url(${src})`,backgroundSize:`${n*100}% ${n*100}%`,backgroundPosition:`${x/(n-1)*100}% ${y/(n-1)*100}%`});
+    const c=Math.hypot(x-(n-1)/2,y-(n-1)/2);t.style.transitionDelay=(c*.07+Math.random()*.15)+'s';
+    frag.appendChild(t);
+  }
+  el.appendChild(frag);scatter(el);
+}
+const assemble=el=>{void el.offsetWidth;requestAnimationFrame(()=>el.classList.add('built'))};
+document.querySelectorAll('.shards').forEach(build);
+
+
+// product cards: rebuild when they enter the view, explode a bit on hover
+
+
+/* ---------- intro ---------- */
+const hero=document.getElementById('hero');
+requestAnimationFrame(()=>{hero.classList.add('go');});
+
+/* ---------- reveal on scroll ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');
+  const s=e.target.querySelector('.shards');if(s)setTimeout(()=>assemble(s),200);io.unobserve(e.target)}),{threshold:.2});
+document.querySelectorAll('.up').forEach(el=>io.observe(el));
+
+/* ---------- scroll effects ---------- */
+const nav=document.getElementById('nav'),rev=document.getElementById('reveal'),top_=document.getElementById('totop');
+function onScroll(){
+  nav.classList.toggle('stuck',scrollY>60);top_.classList.toggle('show',scrollY>800);
+  const r=rev.getBoundingClientRect(),q=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)*1.3));
+  rev.style.setProperty('--i',38-38*q+'%');rev.style.setProperty('--j',30-30*q+'%');rev.style.setProperty('--r',200-200*q+'px');rev.style.setProperty('--o',Math.max(0,q*1.6-.4));
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+
+/* ---------- photo-real fruit morph ---------- */
+const COL=[{bg:'#FFC94A',fg:'#2A1700'},{bg:'#FF4D8D',fg:'#2B0012'},{bg:'#C2D500',fg:'#1D2416'},{bg:'#3BA7FF',fg:'#001A33'},{bg:'#1F3D12',fg:'#E6F5D8'}];
+const story=document.getElementById('story'),spin=document.getElementById('spin'),txs=[...document.querySelectorAll('.story .tx')],sbar=document.getElementById('sbar');
+let curK=-1;
+function storyPos(){
+  const r=story.getBoundingClientRect(),P=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));sbar.style.width=P*100+'%';
+  const pos=P*(COL.length-1),k=Math.min(COL.length-1,Math.round(pos));
+  if(k!==curK){curK=k;spin.style.backgroundColor=COL[k].bg;spin.style.color=COL[k].fg;txs.forEach((t,i)=>t.classList.toggle('on',i===k))}
+  return pos;
+}
+(function(){
+  let SM;try{SM=FruitMorph.Morph(document.getElementById('stg'))}catch(e){console.warn(e);return}
+  // hero: tap = morph to next fruit
+  let hPos=0,hTarget=0;const N=FruitMorph.count;
+  if(0)hero3d.addEventListener('click',()=>{if(Math.abs(hPos-hTarget)<.01){if(hTarget>=N-1){hPos=hTarget=0}else hTarget++}});
+  setInterval(()=>{if(document.hidden||Math.abs(hPos-hTarget)>.01)return;if(hTarget>=N-1){hPos=hTarget=0}else hTarget++},6000);
+  (function loop(){
+    hPos+=(hTarget-hPos)*.035;if(Math.abs(hTarget-hPos)<.002)hPos=hTarget;
+    const hr=hero.getBoundingClientRect();
+    const r=story.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){SM.set(storyPos());SM.render()}
+    requestAnimationFrame(loop);
+  })();
+})();
+
+/* ---------- video modal (plays in the page) ---------- */
+const modal=document.getElementById('modal'),mbox=document.getElementById('mbox');
+function openV(){
+  if(location.protocol==='file:'){mbox.innerHTML='<div style="color:#fff;display:grid;place-items:center;height:100%;text-align:center;padding:30px;font-size:18px"><div><b style="font-size:26px">'+(document.documentElement.lang==='es'?'Abre la página con <u>abrir-pagina.bat</u> para ver el video aquí':'Open the page with <u>abrir-pagina.bat</u> to watch the video here')+'</b><br><br>'+(document.documentElement.lang==='es'?'YouTube no permite reproducir videos en archivos abiertos con doble clic.':'YouTube blocks playback on files opened by double-click.')+'</div></div>';modal.classList.add('open');return}
+  mbox.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/57IqMCNzdYE?autoplay=1&rel=0&playsinline=1" title="Durexporta" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+  modal.classList.add('open');
+}
+function closeV(){modal.classList.remove('open');setTimeout(()=>mbox.innerHTML='',400)}
+document.querySelectorAll('[data-video]').forEach(b=>b.onclick=openV);
+mx.onclick=closeV;modal.onclick=e=>{if(e.target===modal)closeV()};
+addEventListener('keydown',e=>{if(e.key==='Escape')closeV()});
+</script>
+</body>
+</html>
